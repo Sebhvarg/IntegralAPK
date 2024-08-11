@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "IntegralAproximada"
+rootProject.name = "Integral"
 include(":app")

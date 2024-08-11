@@ -1,4 +1,4 @@
-package com.seb.integralaproximada
+package com.cv.integral
 
 import org.junit.Test
 
