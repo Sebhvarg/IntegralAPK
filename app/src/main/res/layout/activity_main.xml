@@ -142,7 +142,7 @@
                     android:text="Ingrese el valor de n" />
 
                 <EditText
-                    android:id="@+id/editTextNumber4"
+                    android:id="@+id/campoN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -164,13 +164,13 @@
                     android:text="Ingrese el valor de a" />
 
                 <EditText
-                    android:id="@+id/editTextNumber3"
+                    android:id="@+id/campoA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="a > 0"
-                    android:inputType="number" />
+                    android:inputType="number"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -183,11 +183,31 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnCalcular"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="Calcular" />
+                android:text="Calcular"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="El valor es:" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
