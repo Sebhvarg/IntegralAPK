@@ -5,7 +5,7 @@ import kotlin.math.pow
 
 
 class Calculo {
-    public fun sumaDeRiemann(a: Int, nIntervalos: Int): Double {
+    public fun sumaDeRiemann(a: Double, nIntervalos: Double): Double {
         val delta = calcularDelta(a, nIntervalos)
         val x = linspace(-a + delta / 2, a - delta / 2, nIntervalos)
         val y = linspace(-a + delta / 2, a - delta / 2, nIntervalos)
@@ -13,16 +13,16 @@ class Calculo {
         var integralApprox = sumatoria(x, y, z, 0.0)
         return integralApprox * delta.pow(3.0)
     }
-    fun calcularDelta(a: Int, nIntervalos: Int): Double {
+    fun calcularDelta(a: Double, nIntervalos: Double): Double {
         var delta = 2 * a.toDouble()
         delta /= nIntervalos
         return delta
     }
 
-    fun linspace(start: Double, end: Double, num: Int): DoubleArray {
-        val result = DoubleArray(num)
+    fun linspace(start: Double, end: Double, num: Double): DoubleArray {
+        val result = DoubleArray(num.toInt())
         val step = (end - start) / (num - 1)
-        for (i in 0 until num) {
+        for (i in 0 until num.toInt()) {
             result[i] = start + i * step
         }
         return result
