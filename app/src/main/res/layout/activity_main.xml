@@ -190,7 +190,14 @@
                 android:id="@+id/infinito"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="n valor infinito" />
+                android:backgroundTint="#5B378C"
+                android:buttonTint="#5B378C"
+                android:drawableTint="#5B378C"
+                android:foregroundTint="#5B378C"
+                android:text="n valor infinito"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:trackTint="#5B378C" />
         </LinearLayout>
 
         <LinearLayout
@@ -207,7 +214,10 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:enabled="false"
-                android:text="Calcular" />
+                android:text="Calcular"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorLink="#5B378C" />
         </LinearLayout>
 
         <LinearLayout

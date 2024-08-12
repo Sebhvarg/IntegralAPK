@@ -67,22 +67,26 @@ class MainActivity : AppCompatActivity() {
             when (isChecked) {
                 true -> {
                     editText2.isEnabled = false
+                    
                     button.isEnabled = true
                     button.setOnClickListener{
                         val a = editText1.text.toString().toDouble()
-                            val r ="El resultado es: "+ redondearDecimal(obtenerValor(a,700.00), 5).toString()
+                            val r ="El resultado es: "+ redondearDecimal(obtenerValor(a,500.00), 5).toString()
+                            button.isEnabled = false;
                             resultado.setTextColor(Color.rgb(90, 55,140))
                             resultado.text = r
 
                         }
                 }
                 false -> {
+                    editText2.setText("")
                     editText2.isEnabled = true
                     button.isEnabled = false
                     button.setOnClickListener{
                         val a = editText1.text.toString().toDouble()
                         val n = editText2.text.toString().toDouble()
                         if (a > 0 && n >= 10){
+                            button.isEnabled = false
                             val r ="El resultado es: "+obtenerValor(a,n).toString()
                             resultado.setTextColor(Color.rgb(90, 55,140))
                             resultado.text = r
