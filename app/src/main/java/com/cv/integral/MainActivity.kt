@@ -1,9 +1,11 @@
 package com.cv.integral
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -67,9 +69,10 @@ class MainActivity : AppCompatActivity() {
             when (isChecked) {
                 true -> {
                     editText2.isEnabled = false
-                    
+
                     button.isEnabled = true
                     button.setOnClickListener{
+                        hideKeyboard(this)
                         val a = editText1.text.toString().toDouble()
                             val r ="El resultado es: "+ redondearDecimal(obtenerValor(a,500.00), 5).toString()
                             button.isEnabled = false;
@@ -85,6 +88,7 @@ class MainActivity : AppCompatActivity() {
                     button.setOnClickListener{
                         val a = editText1.text.toString().toDouble()
                         val n = editText2.text.toString().toDouble()
+                        hideKeyboard(this)
                         if (a > 0 && n >= 10){
                             button.isEnabled = false
                             val r ="El resultado es: "+obtenerValor(a,n).toString()
@@ -149,6 +153,11 @@ class MainActivity : AppCompatActivity() {
     private fun redondearDecimal(valor: Double, decimales: Int): Double {
         val decimal = BigDecimal(valor)
         return decimal.setScale(decimales, RoundingMode.HALF_UP).toDouble()
+    }
+
+    fun hideKeyboard(activity: AppCompatActivity) {
+        val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(activity.currentFocus?.windowToken, 0)
     }
 
 
