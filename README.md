@@ -17,3 +17,5 @@ cuando $$a$$ y el número de sub-intervalos ingresados es suficientemennte grand
 ### Solución:
 [Descargar APK](https://espolec-my.sharepoint.com/:u:/g/personal/sebhvarg_espol_edu_ec/Eec997j942RLtx2-KV-wtIEBPZiNB4R338hQ6qGslUClRw?e=aOD9ZL)
 
+[Proyecto en Java](https://github.com/Sebhvarg/IntegralAproximacion.git)
+
